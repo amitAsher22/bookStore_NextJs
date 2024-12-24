@@ -1,5 +1,10 @@
+import { getAllBooks } from "../lib/fake-data";
+import BookList from "../ui/books/BookList";
+
 const BookListPage = () => {
-  return <div>book list pape</div>;
+  const books = getAllBooks();
+
+  return <BookList books={books} />;
 };
 
 export default BookListPage;

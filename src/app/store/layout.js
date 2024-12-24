@@ -1,7 +1,8 @@
 import Sidebar from "../ui/sidebar/Sidebar";
 
 export const metadata = {
-  title: "layout store",
+  title: "book store",
+  description: "stor book shop",
 };
 
 export default function BookStoreLayout({ children }) {
