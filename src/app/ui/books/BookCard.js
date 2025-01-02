@@ -10,9 +10,9 @@ import {
 
 const BookCard = ({ book }) => {
   return (
-    <div className="flex flex-wrap">
+    <div>
       <Link href={`/store/${book.id}`}>
-        <div className="flex flex-col items-center rounded-xl bg-gray-50 p-2 m-2 shadow-sm">
+        <div className="flex flex-col items-center rounded-xl  p-2 m-2 shadow-sm bg-white">
           <div className="flex p-4">
             <h3 className="ml-2 text-sm font-medium">{book.title}</h3>
           </div>

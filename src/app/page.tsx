@@ -12,7 +12,7 @@ export default function Home() {
   return (
  
 
-    <div className="flex flex-col relative justify-center items-center h-screen">
+    <div className="flex flex-col relative justify-center items-center h-screen ">
 
       <Image className="blur-sm" src={backgroundImage} alt="background Image" fill sizes="100vw" objectFit="cover"/>
       <div className="flex flex-col justify-center items-center bg-purple-100 rounded-md p-2 lg:w-2/5 h-1/4 z-10">
