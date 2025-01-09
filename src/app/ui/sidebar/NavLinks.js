@@ -35,7 +35,7 @@ const NavLinks = () => {
           <Link
             key={link.name}
             href={link.href}
-            className="flex h-[40px] grow items-center space-between gap-2 rounded-md  p-5 text-sm font-medium hover:bg-sky-100 hover:text-purple-600 md:flex-none md:justify-start md:p-2 md:px-3 border-b-4 border-b-gray-50 bg-gray-50 sm:bg-white-50 "
+            className="flex h-[40px] grow items-center space-between gap-2 rounded-md  p-5 text-sm font-medium hover:bg-sky-100 hover:text-purple-600 md:flex-none md:justify-start md:p-2 md:px-3 border-b-4 border-b-gray-50 bg-gray-50  "
           >
             <IconComponent className="w-6 " />
             <p className="hidden md:block">

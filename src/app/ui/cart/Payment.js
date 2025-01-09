@@ -1,16 +1,33 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { CreditCardIcon } from "@heroicons/react/24/solid";
 
 function payment() {
   const router = useRouter();
+  const [formData, setFormData] = useState({ card: "", name: "", expired: "" });
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
   const makePayment = () => {
     router.push("/store/track-order");
   };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const resetAll = () => {
+    setFormData({ card: "", name: "", expired: "" });
+  };
   return (
     <div className="w-full max-w-xs">
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="mb-2">
           <label className="block text-gray-700 text-sm font-bold mb-2">
             Card Number{" "}
@@ -18,8 +35,10 @@ function payment() {
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="card"
-            type="text"
             placeholder="Exter Card Number"
+            onChange={handleChange}
+            value={formData.card}
+            name="card"
           />
         </div>
 
@@ -35,6 +54,9 @@ function payment() {
             id="name"
             type="text"
             placeholder="Enter the Name"
+            onChange={handleChange}
+            value={formData.name}
+            name="name"
           />
         </div>
 
@@ -49,6 +71,9 @@ function payment() {
             className="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             id="expiry"
             type="date"
+            onChange={handleChange}
+            value={formData.expired}
+            name="expired"
           />
         </div>
         <div className="mb-6">
@@ -74,12 +99,12 @@ function payment() {
           >
             Make Payment
           </button>
-          <a
+          <button
+            onClick={resetAll}
             className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-            href="#"
           >
             Reset Values
-          </a>
+          </button>
         </div>
       </form>
     </div>

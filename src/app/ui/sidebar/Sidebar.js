@@ -5,12 +5,12 @@ import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/solid";
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       <Link
         href="/store"
-        className="bg-purple-500 mb-2 flex h-20 items-end justify-start rounded-md  "
+        className=" mb-2 flex h-20 items-end justify-start rounded-md  "
       >
-        <div className="w-32 ">
+        <div>
           <Logo />
         </div>
       </Link>
@@ -19,7 +19,9 @@ const Sidebar = () => {
         <NavLinks />
         <form>
           <button className="flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-purple-600 md:flex-none md:justify-start md:px-3">
-            <ArrowLeftOnRectangleIcon className="w-6" />
+            <Link href="/login">
+              <ArrowLeftOnRectangleIcon className="w-6" />
+            </Link>
           </button>
         </form>
       </div>

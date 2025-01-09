@@ -5,7 +5,6 @@ import { useMyContext } from "@/app/context/MyContext";
 
 const Orderdetails = () => {
   const { value, setValue } = useMyContext();
-  console.log(value);
 
   const booksToBuy = value.filter((book) => {
     return book.reason === "Buy";
